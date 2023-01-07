@@ -1,0 +1,11 @@
+{% extends '_base.html' %}
+
+{% block page_title %}جزِئیات کتاب {{  book.title }}{% endblock page_title %}
+
+{% block content %}
+	<h1>{{ book.title }}</h1>
+	<h4>{{ book.author }}</h4>
+	<p>{{ book.description }}</p>
+	<h6>قیمت: {{ book.price }}</h6>
+
+{% endblock %}
