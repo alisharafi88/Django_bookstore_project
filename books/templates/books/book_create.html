@@ -1,0 +1,12 @@
+{% extends '_base.html' %}
+{% load crispy_forms_tags %}
+
+{% block page_title %}کتاب جدید{% endblock page_title %}
+
+{% block content %}
+	<form method="post">
+	{% csrf_token %}
+	{{ form|crispy }}
+		<button type="submit" class="btn btn-success mt-3" >تایید</button>
+	</form>
+{% endblock %}

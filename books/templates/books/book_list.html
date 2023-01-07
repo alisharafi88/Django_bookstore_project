@@ -6,7 +6,7 @@
 	{% for book in books %}
 		<a href='{{ book.get_absolute_url }}'><h1>{{ book.title }}</h1></a>
 		<p>{{ book.description }}</p>
-
 	{% endfor %}
+	<a href="{% url 'new_book' %}">اضافه کردن کتاب جدید</a>
 	
 {% endblock %}
