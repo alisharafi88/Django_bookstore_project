@@ -5,9 +5,11 @@
 {% block content %}
 	<h1>{{ book.title }}</h1>
 	<h4>{{ book.author }}</h4>
-	<p>{{ book.description }}</p>
+	<p>{{ book.description|linebreaks }}</p>
 	<h6>قیمت: {{ book.price }}</h6>
 	<a href="{% url 'update_book' book.id %}"><button type="button" class="btn btn-info mt-3">ویرایش</button></a>
+	<a href="{% url 'delete_book' book.id %}"><button type="button" class="btn btn-danger mt-3">حذف</button></a>
+
 	<br>
 	<a href="{% url 'book_list.html' %}">لیست همه ی کتاب ها</a>
 

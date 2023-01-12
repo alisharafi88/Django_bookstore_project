@@ -1,0 +1,15 @@
+{% extends '_base.html' %}
+
+{% block page_title %}حذف کتاب {{  book.title }}{% endblock page_title %}
+
+{% block content %}
+	<h1>حذف کتاب {{ book.title }} </h1>
+	<form action="" method="post" >
+		<p>ایا از حذف کتاب {{ book.title }}مطمئن هستید؟!</p>
+		<input type="submit" class="btn btn-danger" value="!بله">
+
+	</form>
+	<br>
+	<a href="{% url 'book_list.html' %}">لیست همه ی کتاب ها</a>
+
+{% endblock %}
