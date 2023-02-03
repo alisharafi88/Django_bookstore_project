@@ -21,4 +21,5 @@ class Comment(models.Model):
     user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
     book = models.ForeignKey(Book, on_delete=models.CASCADE, related_name='comment')
     text = models.TextField()
+    recommend = models.BooleanField(default=True)
     datetime = models.DateTimeField(auto_now_add=True)
