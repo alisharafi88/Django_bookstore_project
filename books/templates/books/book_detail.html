@@ -22,10 +22,12 @@
 							<h1>{{ book.title }}</h1>
 							<h5 class="small my-1"><span class="text-muted">نویسنده: </span>{{ book.author }}</h5>
 							<h5 class="small my-1"><span class="text-muted">سازنده: </span>{{ book.user.username }}</h5>
-
+							{% if book.user == user %}
 							<a style="color:#2543d8;" class="text-decoration-none" href="{% url 'update_book' book.id %}">ویرایش</a>
 							<span>یا</span>
 							<a class="text-decoration-none" style="color:#d82525;" href="{% url 'delete_book' book.id %}">حذف</a>
+							{% endif %}
+
 
 						</div>
 						<div class="col-xs-12 col-md-3 d-flex flex-column">
